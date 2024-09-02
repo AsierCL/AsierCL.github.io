@@ -542,19 +542,30 @@ span.colored {
 
 /*----- Social Links
 -------------------------------*/
-#billboard .socila-links ul {
-    display: flex;
-}
-#billboard .socila-links li {
-    padding-right: 30px;
-}
-#billboard .socila-links a {
-    color: #f9f6f6;
-}
-#billboard .socila-links a:hover {
-    color: #fba820;
+.social-links ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;       /* Elimina el relleno de la lista */
+    margin: 0;        /* Elimina el margen de la lista */
 }
 
+.social-links li {
+    display: inline-block; /* Muestra los <li> en línea */
+    margin-right: 10px;    /* Espacio entre los iconos, ajusta según lo necesites */
+}
+
+.social-links img {
+    width: 32px;  /* Ajusta este valor según el tamaño que desees */
+    height: 32px; /* Ajusta este valor según el tamaño que desees */
+    margin-right: 10px; /* Espacio entre los iconos */
+    vertical-align: middle;
+    transition: transform 0.8s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Suaviza las transiciones */
+}
+
+.social-links img:hover {
+    transform: scale(1.2) rotate(360deg);       /* Aumenta el tamaño del icono en un 20% */
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(500%) hue-rotate(90deg) brightness(1) contrast(1); /* Pinta el icono de amarillo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
+}
 
 /*----- About Me Section
 --------------------------------------------------------------*/
