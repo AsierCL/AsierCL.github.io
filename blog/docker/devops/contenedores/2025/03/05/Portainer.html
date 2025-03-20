@@ -1,0 +1,88 @@
+<h2 id="qué-es-portainer">¿Qué es Portainer?</h2>
+
+<p>Portainer es una herramienta de código abierto que facilita la administración de contenedores Docker a través de una interfaz gráfica intuitiva. Su objetivo es simplificar la gestión de entornos Docker, permitiendo a los usuarios monitorear, desplegar y controlar contenedores sin necesidad de utilizar la línea de comandos.</p>
+
+<p>Es compatible con Docker, Kubernetes, Docker Swarm y Nomad, lo que lo convierte en una opción versátil para la administración de infraestructura basada en contenedores.</p>
+
+<h2 id="para-qué-sirve">¿Para qué sirve?</h2>
+
+<p>Con Portainer, puedes realizar tareas como:</p>
+
+<ul>
+  <li>Gestionar contenedores, imágenes, volúmenes y redes de Docker.</li>
+  <li>Implementar y administrar stacks con Docker Compose.</li>
+  <li>Monitorear el estado de los contenedores y su consumo de recursos.</li>
+  <li>Controlar permisos y accesos con autenticación y roles.</li>
+  <li>Gestionar entornos de Docker locales o remotos de forma centralizada.</li>
+</ul>
+
+<h2 id="instalación-de-portainer-en-docker">Instalación de Portainer en Docker</h2>
+
+<p>Para instalar Portainer en un sistema con Docker ya instalado, sigue estos pasos:</p>
+
+<h3 id="1-crear-un-volumen-para-almacenar-datos-de-portainer">1. Crear un volumen para almacenar datos de Portainer</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume create portainer_data
+</code></pre></div></div>
+
+<h3 id="2-ejecutar-el-contenedor-de-portainer">2. Ejecutar el contenedor de Portainer</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="se">\</span>
+  <span class="nt">--name</span> portainer <span class="se">\</span>
+  <span class="nt">--restart</span><span class="o">=</span>always <span class="se">\</span>
+  <span class="nt">-p</span> 8000:8000 <span class="se">\</span>
+  <span class="nt">-p</span> 9443:9443 <span class="se">\</span>
+  <span class="nt">-v</span> /var/run/docker.sock:/var/run/docker.sock <span class="se">\</span>
+  <span class="nt">-v</span> portainer_data:/data <span class="se">\</span>
+  portainer/portainer-ce:latest
+</code></pre></div></div>
+<p>Este comando:</p>
+<ul>
+  <li>Inicia Portainer en modo daemon (<code class="language-plaintext highlighter-rouge">-d</code>).</li>
+  <li>Expone los puertos 8000 y 9443 (interfaz web con HTTPS).</li>
+  <li>Monta el socket de Docker para interactuar con el daemon.</li>
+  <li>Usa el volumen <code class="language-plaintext highlighter-rouge">portainer_data</code> para almacenar la configuración.</li>
+</ul>
+
+<h3 id="3-acceder-a-la-interfaz-web">3. Acceder a la interfaz web</h3>
+<p>Abre un navegador y dirígete a:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://localhost:9443
+</code></pre></div></div>
+<p>La primera vez que accedas, deberás crear un usuario administrador.</p>
+
+<h2 id="cómo-usar-portainer">¿Cómo usar Portainer?</h2>
+
+<p>Una vez instalado, puedes:</p>
+
+<ol>
+  <li><strong>Conectar Docker local o remoto</strong>: Desde “Environments” puedes gestionar múltiples hosts.</li>
+  <li><strong>Gestionar contenedores</strong>: Inicia, detiene, elimina y monitorea contenedores desde la pestaña “Containers”.</li>
+  <li><strong>Desplegar aplicaciones</strong>: Usa Docker Compose en “Stacks” para definir servicios en archivos <code class="language-plaintext highlighter-rouge">docker-compose.yml</code>.</li>
+  <li><strong>Monitorear recursos</strong>: Consulta el consumo de CPU, memoria y almacenamiento de tus contenedores.</li>
+  <li><strong>Gestionar redes y volúmenes</strong>: Administra redes Docker personalizadas y volúmenes de almacenamiento.</li>
+</ol>
+
+<h2 id="pros-y-contras-de-portainer">Pros y Contras de Portainer</h2>
+
+<h3 id="-ventajas">✅ Ventajas</h3>
+<ul>
+  <li><strong>Fácil de usar</strong>: Interfaz gráfica intuitiva.</li>
+  <li><strong>Compatible con múltiples plataformas</strong>: Funciona con Docker, Kubernetes y Swarm.</li>
+  <li><strong>Gestión remota</strong>: Permite administrar servidores Docker a distancia.</li>
+  <li><strong>Autenticación y control de acceso</strong>: Soporte para usuarios y roles.</li>
+</ul>
+
+<h3 id="-desventajas">❌ Desventajas</h3>
+<ul>
+  <li><strong>Limitaciones en la versión gratuita</strong>: Algunas funcionalidades avanzadas solo están en la versión Business.</li>
+  <li><strong>Consumo de recursos</strong>: Aunque ligero, puede ser innecesario para quienes prefieren usar la CLI.</li>
+  <li><strong>Curva de aprendizaje en Kubernetes</strong>: La integración con Kubernetes puede requerir configuración extra.</li>
+</ul>
+
+<h2 id="conclusión">Conclusión</h2>
+
+<p>Portainer es una excelente herramienta para administrar entornos Docker de manera visual y sencilla. Su facilidad de uso lo hace ideal tanto para principiantes como para administradores de sistemas que buscan eficiencia en la gestión de contenedores.</p>
+
+<p>Si quieres simplificar la administración de Docker y no depender exclusivamente de la terminal, Portainer es una opción altamente recomendable.</p>
+
+<hr />
+
+<p>📌 <strong>¿Tienes dudas o comentarios?</strong> Déjalos abajo o contáctame en mis redes. ¡Nos vemos en el próximo artículo! 🚀</p>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Portainer: Gestión simplificada de contenedores Docker | Blog de Asier</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Portainer: Gestión simplificada de contenedores Docker" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Portainer" />
+<meta property="og:description" content="Portainer" />
+<link rel="canonical" href="/blog/docker/devops/2025/03/05/Portainer.html" />
+<meta property="og:url" content="/blog/docker/devops/2025/03/05/Portainer.html" />
+<meta property="og:site_name" content="Blog de Asier" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-05T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Portainer: Gestión simplificada de contenedores Docker" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-05T00:00:00+01:00","datePublished":"2025-03-05T00:00:00+01:00","description":"Portainer","headline":"Portainer: Gestión simplificada de contenedores Docker","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/docker/devops/2025/03/05/Portainer.html"},"url":"/blog/docker/devops/2025/03/05/Portainer.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="Blog de Asier" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Blog de Asier</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Portainer: Gestión simplificada de contenedores Docker</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-03-05T00:00:00+01:00" itemprop="datePublished">Mar 5, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="portainer">Portainer</h1>
+
+<p>Portainer es una herramienta de código abierto que facilita la administración de contenedores Docker a través de una interfaz gráfica intuitiva. Su objetivo es simplificar la gestión de entornos Docker, permitiendo a los usuarios monitorear, desplegar y controlar contenedores sin necesidad de utilizar la línea de comandos.</p>
+
+<p>Es compatible con Docker, Kubernetes, Docker Swarm y Nomad, lo que lo convierte en una opción versátil para la administración de infraestructura basada en contenedores.</p>
+
+<h2 id="para-qué-sirve">¿Para qué sirve?</h2>
+
+<p>Con Portainer, puedes realizar tareas como:</p>
+
+<ul>
+  <li>Gestionar contenedores, imágenes, volúmenes y redes de Docker.</li>
+  <li>Implementar y administrar stacks con Docker Compose.</li>
+  <li>Monitorear el estado de los contenedores y su consumo de recursos.</li>
+  <li>Controlar permisos y accesos con autenticación y roles.</li>
+  <li>Gestionar entornos de Docker locales o remotos de forma centralizada.</li>
+</ul>
+
+<h2 id="instalación-de-portainer-en-docker">Instalación de Portainer en Docker</h2>
+
+<p>Para instalar Portainer en un sistema con Docker ya instalado, sigue estos pasos:</p>
+
+<h3 id="1-crear-un-volumen-para-almacenar-datos-de-portainer">1. Crear un volumen para almacenar datos de Portainer</h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">docker volume create portainer_data</code></pre></figure>
+
+<h3 id="2-ejecutar-el-contenedor-de-portainer">2. Ejecutar el contenedor de Portainer</h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">docker run <span class="nt">-d</span> <span class="se">\</span>
+  <span class="nt">--name</span> portainer <span class="se">\</span>
+  <span class="nt">--restart</span><span class="o">=</span>always <span class="se">\</span>
+  <span class="nt">-p</span> 8000:8000 <span class="se">\</span>
+  <span class="nt">-p</span> 9443:9443 <span class="se">\</span>
+  <span class="nt">-v</span> /var/run/docker.sock:/var/run/docker.sock <span class="se">\</span>
+  <span class="nt">-v</span> portainer_data:/data <span class="se">\</span>
+  portainer/portainer-ce:latest</code></pre></figure>
+
+<p>Este comando:</p>
+<ul>
+  <li>Inicia Portainer en modo daemon (<code class="language-plaintext highlighter-rouge">-d</code>).</li>
+  <li>Expone los puertos 8000 y 9443 (interfaz web con HTTPS).</li>
+  <li>Monta el socket de Docker para interactuar con el daemon.</li>
+  <li>Usa el volumen <code class="language-plaintext highlighter-rouge">portainer_data</code> para almacenar la configuración.</li>
+</ul>
+
+<h3 id="3-acceder-a-la-interfaz-web">3. Acceder a la interfaz web</h3>
+<p>Abre un navegador y dirígete a:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://localhost:9443
+</code></pre></div></div>
+<p>La primera vez que accedas, deberás crear un usuario administrador.</p>
+
+<h2 id="cómo-usar-portainer">¿Cómo usar Portainer?</h2>
+
+<p>Una vez instalado, puedes:</p>
+
+<ol>
+  <li><strong>Conectar Docker local o remoto</strong>: Desde “Environments” puedes gestionar múltiples hosts.</li>
+  <li><strong>Gestionar contenedores</strong>: Inicia, detiene, elimina y monitorea contenedores desde la pestaña “Containers”.</li>
+  <li><strong>Desplegar aplicaciones</strong>: Usa Docker Compose en “Stacks” para definir servicios en archivos <code class="language-plaintext highlighter-rouge">docker-compose.yml</code>.</li>
+  <li><strong>Monitorear recursos</strong>: Consulta el consumo de CPU, memoria y almacenamiento de tus contenedores.</li>
+  <li><strong>Gestionar redes y volúmenes</strong>: Administra redes Docker personalizadas y volúmenes de almacenamiento.</li>
+</ol>
+
+<h2 id="pros-y-contras-de-portainer">Pros y Contras de Portainer</h2>
+
+<h3 id="-ventajas">✅ Ventajas</h3>
+<ul>
+  <li><strong>Fácil de usar</strong>: Interfaz gráfica intuitiva.</li>
+  <li><strong>Compatible con múltiples plataformas</strong>: Funciona con Docker, Kubernetes y Swarm.</li>
+  <li><strong>Gestión remota</strong>: Permite administrar servidores Docker a distancia.</li>
+  <li><strong>Autenticación y control de acceso</strong>: Soporte para usuarios y roles.</li>
+</ul>
+
+<h3 id="-desventajas">❌ Desventajas</h3>
+<ul>
+  <li><strong>Limitaciones en la versión gratuita</strong>: Algunas funcionalidades avanzadas solo están en la versión Business.</li>
+  <li><strong>Consumo de recursos</strong>: Aunque ligero, puede ser innecesario para quienes prefieren usar la CLI.</li>
+  <li><strong>Curva de aprendizaje en Kubernetes</strong>: La integración con Kubernetes puede requerir configuración extra.</li>
+</ul>
+
+<h2 id="conclusión">Conclusión</h2>
+
+<p>Portainer es una excelente herramienta para administrar entornos Docker de manera visual y sencilla. Su facilidad de uso lo hace ideal tanto para principiantes como para administradores de sistemas que buscan eficiencia en la gestión de contenedores.</p>
+
+<p>Si quieres simplificar la administración de Docker y no depender exclusivamente de la terminal, Portainer es una opción altamente recomendable.</p>
+
+<hr />
+
+<p>📌 <strong>¿Tienes dudas o comentarios?</strong> Déjalos abajo o contáctame en mis redes. ¡Nos vemos en el próximo artículo! 🚀</p>
+
+  </div><a class="u-url" href="/blog/docker/devops/2025/03/05/Portainer.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Blog de Asier</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Blog de Asier</li><li><a class="u-email" href="mailto:asiercl.05@gmail.com">asiercl.05@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/AsierCL"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">AsierCL</span></a></li><li><a href="https://www.twitter.com/asiercl_05"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">asiercl_05</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

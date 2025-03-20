@@ -1,4 +1,296 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="/blog/" rel="alternate" type="text/html" /><updated>2025-03-04T12:38:30+01:00</updated><id>/blog/feed.xml</id><title type="html">Blog de Asier</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="/blog/jekyll/update/2025/02/25/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-02-25T20:09:39+01:00</published><updated>2025-02-25T20:09:39+01:00</updated><id>/blog/jekyll/update/2025/02/25/welcome-to-jekyll</id><content type="html" xml:base="/blog/jekyll/update/2025/02/25/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="/blog/" rel="alternate" type="text/html" /><updated>2025-03-07T12:38:49+01:00</updated><id>/blog/feed.xml</id><title type="html">Blog de Asier</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Guía Completa sobre Licencias de Código en GitHub</title><link href="/blog/github/licencias/open-source/2025/03/07/Licencias-en-Github.html" rel="alternate" type="text/html" title="Guía Completa sobre Licencias de Código en GitHub" /><published>2025-03-07T12:00:00+01:00</published><updated>2025-03-07T12:00:00+01:00</updated><id>/blog/github/licencias/open-source/2025/03/07/Licencias-en-Github</id><content type="html" xml:base="/blog/github/licencias/open-source/2025/03/07/Licencias-en-Github.html"><![CDATA[<p>En el mundo del desarrollo de software, especialmente en proyectos de código abierto, elegir una licencia adecuada es fundamental. GitHub ofrece varias opciones de licencias que afectan cómo otros pueden usar, modificar y distribuir tu código. En esta guía, exploraremos los distintos tipos de licencias disponibles, sus características, ventajas, desventajas y cuándo es más apropiado usar cada una.</p>
+
+<h2 id="por-qué-es-importante-una-licencia">¿Por qué es importante una licencia?</h2>
+
+<p>Cuando publicas un proyecto en GitHub sin una licencia, legalmente, nadie más puede utilizarlo, modificarlo o redistribuirlo sin tu permiso explícito. Una licencia de código abierto define los términos bajo los cuales otros pueden contribuir o reutilizar tu software, fomentando la colaboración y asegurando el respeto a tus condiciones de uso.</p>
+
+<h2 id="tipos-de-licencias-en-github">Tipos de licencias en GitHub</h2>
+
+<p>Las licencias de código abierto pueden agruparse en dos grandes categorías:</p>
+
+<ol>
+  <li><strong>Licencias permisivas</strong>: Permiten el uso y la redistribución con mínimas restricciones.</li>
+  <li><strong>Licencias copyleft</strong>: Requieren que las modificaciones y derivados se distribuyan bajo la misma licencia.</li>
+</ol>
+
+<h3 id="1-licencias-permisivas">1. Licencias permisivas</h3>
+
+<p>Las licencias permisivas permiten la reutilización del código con pocas restricciones. Generalmente, solo requieren que se mantenga el aviso de derechos de autor y la licencia original.</p>
+
+<h4 id="mit-license"><strong>MIT License</strong></h4>
+
+<ul>
+  <li><strong>Descripción</strong>: Una de las licencias más simples y populares. Permite a los usuarios hacer casi cualquier cosa con el código, siempre que incluyan el aviso de derechos de autor.</li>
+  <li><strong>Ventajas</strong>:
+    <ul>
+      <li>Extremadamente flexible y sencilla.</li>
+      <li>Facilita la adopción del software por empresas y proyectos comerciales.</li>
+      <li>Compatible con casi todas las demás licencias.</li>
+    </ul>
+  </li>
+  <li><strong>Desventajas</strong>:
+    <ul>
+      <li>No protege contra el uso propietario del código; empresas pueden modificar y distribuir sin compartir cambios.</li>
+    </ul>
+  </li>
+  <li><strong>Cuándo usarla</strong>:
+    <ul>
+      <li>Si deseas que tu código sea usado ampliamente sin restricciones estrictas.</li>
+      <li>Si buscas fomentar la colaboración sin imponer requisitos sobre código derivado.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="apache-license-20"><strong>Apache License 2.0</strong></h4>
+
+<ul>
+  <li><strong>Descripción</strong>: Similar a la MIT, pero con una cláusula de patente que protege a los usuarios de reclamaciones de patentes relacionadas con el software.</li>
+  <li><strong>Ventajas</strong>:
+    <ul>
+      <li>Protección contra demandas de patentes.</li>
+      <li>Permite modificaciones y distribución sin obligación de liberar cambios.</li>
+    </ul>
+  </li>
+  <li><strong>Desventajas</strong>:
+    <ul>
+      <li>Más compleja que la MIT.</li>
+    </ul>
+  </li>
+  <li><strong>Cuándo usarla</strong>:
+    <ul>
+      <li>Si te preocupa la propiedad intelectual y las patentes.</li>
+      <li>Si deseas permitir el uso empresarial sin restricciones.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="bsd-licenses-bsd-2-clause-y-bsd-3-clause"><strong>BSD Licenses (BSD 2-Clause y BSD 3-Clause)</strong></h4>
+
+<ul>
+  <li><strong>Descripción</strong>: Similares a la MIT, pero la versión de 3 cláusulas incluye una restricción adicional para evitar el uso del nombre del proyecto en publicidad sin permiso.</li>
+  <li><strong>Ventajas</strong>:
+    <ul>
+      <li>Permisiva y compatible con licencias propietarias.</li>
+      <li>La BSD 3-Clause evita la asociación indebida con el proyecto original.</li>
+    </ul>
+  </li>
+  <li><strong>Desventajas</strong>:
+    <ul>
+      <li>No impide que terceros cierren el código y lo usen de forma privativa.</li>
+    </ul>
+  </li>
+  <li><strong>Cuándo usarla</strong>:
+    <ul>
+      <li>Si buscas una alternativa a la MIT con pequeñas diferencias en restricciones.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-licencias-copyleft">2. Licencias Copyleft</h3>
+
+<p>Las licencias copyleft aseguran que cualquier modificación o derivado del código también sea publicado bajo la misma licencia, promoviendo la filosofía del software libre.</p>
+
+<h4 id="gnu-general-public-license-gpl-v2-y-v3"><strong>GNU General Public License (GPL v2 y v3)</strong></h4>
+
+<ul>
+  <li><strong>Descripción</strong>: Requiere que cualquier software derivado también sea distribuido bajo la GPL.</li>
+  <li><strong>Ventajas</strong>:
+    <ul>
+      <li>Garantiza que el código permanezca siempre abierto.</li>
+      <li>Fomenta la comunidad y la colaboración en el software libre.</li>
+    </ul>
+  </li>
+  <li><strong>Desventajas</strong>:
+    <ul>
+      <li>No es compatible con código propietario, lo que puede limitar su adopción en entornos comerciales.</li>
+      <li>Algunas empresas evitan software bajo GPL para no verse obligadas a liberar su código.</li>
+    </ul>
+  </li>
+  <li><strong>Cuándo usarla</strong>:
+    <ul>
+      <li>Si quieres asegurarte de que tu código y cualquier derivado permanezca abierto.</li>
+      <li>Si tu objetivo es contribuir al software libre y evitar apropiaciones privadas.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="lgpl-lesser-general-public-license"><strong>LGPL (Lesser General Public License)</strong></h4>
+
+<ul>
+  <li><strong>Descripción</strong>: Similar a la GPL, pero permite que el código se use en software propietario siempre que se mantenga como una biblioteca separada.</li>
+  <li><strong>Ventajas</strong>:
+    <ul>
+      <li>Más flexible que la GPL.</li>
+      <li>Permite que el código sea utilizado en proyectos comerciales sin obligar a liberar el código propietario.</li>
+    </ul>
+  </li>
+  <li><strong>Desventajas</strong>:
+    <ul>
+      <li>Menos protección para mantener el código completamente abierto.</li>
+    </ul>
+  </li>
+  <li><strong>Cuándo usarla</strong>:
+    <ul>
+      <li>Si desarrollas bibliotecas o frameworks y quieres fomentar su adopción sin restricciones excesivas.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="mozilla-public-license-20-mpl-20"><strong>Mozilla Public License 2.0 (MPL-2.0)</strong></h4>
+
+<ul>
+  <li><strong>Descripción</strong>: Un punto intermedio entre licencias permisivas y GPL; permite mezclar código abierto con código propietario, pero obliga a que las modificaciones en los archivos con licencia MPL se mantengan abiertas.</li>
+  <li><strong>Ventajas</strong>:
+    <ul>
+      <li>Permite combinar código abierto y propietario.</li>
+      <li>Protección moderada para asegurar apertura en modificaciones directas.</li>
+    </ul>
+  </li>
+  <li><strong>Desventajas</strong>:
+    <ul>
+      <li>No tan permisiva como MIT o Apache.</li>
+      <li>No tan estricta en protección como la GPL.</li>
+    </ul>
+  </li>
+  <li><strong>Cuándo usarla</strong>:
+    <ul>
+      <li>Si quieres permitir el uso comercial, pero asegurando que ciertas partes del código sigan siendo abiertas.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="cómo-elegir-la-mejor-licencia-para-tu-proyecto">¿Cómo elegir la mejor licencia para tu proyecto?</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Situación</th>
+      <th>Licencia recomendada</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Quiero que cualquiera use mi código sin restricciones</td>
+      <td>MIT / BSD</td>
+    </tr>
+    <tr>
+      <td>Me preocupa la propiedad intelectual y las patentes</td>
+      <td>Apache 2.0</td>
+    </tr>
+    <tr>
+      <td>Quiero asegurarme de que todo código derivado siga siendo libre</td>
+      <td>GPL v3</td>
+    </tr>
+    <tr>
+      <td>Quiero permitir el uso en software propietario, pero manteniendo mi código abierto</td>
+      <td>MPL-2.0 / LGPL</td>
+    </tr>
+    <tr>
+      <td>Trabajo en una librería y quiero facilitar su integración en proyectos comerciales</td>
+      <td>LGPL</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="conclusión">Conclusión</h2>
+
+<p>Elegir la licencia correcta en GitHub es un paso crucial para definir cómo tu código será utilizado y compartido. Las licencias permisivas como MIT y Apache 2.0 ofrecen mayor flexibilidad y adopción comercial, mientras que licencias copyleft como GPL garantizan que el código permanezca abierto.</p>
+
+<p>Si tu objetivo es maximizar la adopción, MIT o Apache son excelentes opciones. Si quieres proteger el carácter abierto de tu software, GPL es la mejor alternativa.</p>
+
+<p>Recuerda siempre incluir un archivo <code class="language-plaintext highlighter-rouge">LICENSE.md</code> en tu repositorio de GitHub para dejar claras las condiciones de uso de tu código.</p>
+
+<hr />
+
+<p>📌 <strong>¿Tienes dudas sobre qué licencia elegir?</strong> Déjalas en los comentarios o contáctame en mis redes. ¡Hasta el próximo artículo! 🚀</p>]]></content><author><name></name></author><category term="github" /><category term="licencias" /><category term="open-source" /><summary type="html"><![CDATA[En el mundo del desarrollo de software, especialmente en proyectos de código abierto, elegir una licencia adecuada es fundamental. GitHub ofrece varias opciones de licencias que afectan cómo otros pueden usar, modificar y distribuir tu código. En esta guía, exploraremos los distintos tipos de licencias disponibles, sus características, ventajas, desventajas y cuándo es más apropiado usar cada una.]]></summary></entry><entry><title type="html">Portainer: Gestión simplificada de contenedores Docker</title><link href="/blog/docker/devops/2025/03/05/Portainer.html" rel="alternate" type="text/html" title="Portainer: Gestión simplificada de contenedores Docker" /><published>2025-03-05T00:00:00+01:00</published><updated>2025-03-05T00:00:00+01:00</updated><id>/blog/docker/devops/2025/03/05/Portainer</id><content type="html" xml:base="/blog/docker/devops/2025/03/05/Portainer.html"><![CDATA[<h1 id="portainer">Portainer</h1>
+
+<p>Portainer es una herramienta de código abierto que facilita la administración de contenedores Docker a través de una interfaz gráfica intuitiva. Su objetivo es simplificar la gestión de entornos Docker, permitiendo a los usuarios monitorear, desplegar y controlar contenedores sin necesidad de utilizar la línea de comandos.</p>
+
+<p>Es compatible con Docker, Kubernetes, Docker Swarm y Nomad, lo que lo convierte en una opción versátil para la administración de infraestructura basada en contenedores.</p>
+
+<h2 id="para-qué-sirve">¿Para qué sirve?</h2>
+
+<p>Con Portainer, puedes realizar tareas como:</p>
+
+<ul>
+  <li>Gestionar contenedores, imágenes, volúmenes y redes de Docker.</li>
+  <li>Implementar y administrar stacks con Docker Compose.</li>
+  <li>Monitorear el estado de los contenedores y su consumo de recursos.</li>
+  <li>Controlar permisos y accesos con autenticación y roles.</li>
+  <li>Gestionar entornos de Docker locales o remotos de forma centralizada.</li>
+</ul>
+
+<h2 id="instalación-de-portainer-en-docker">Instalación de Portainer en Docker</h2>
+
+<p>Para instalar Portainer en un sistema con Docker ya instalado, sigue estos pasos:</p>
+
+<h3 id="1-crear-un-volumen-para-almacenar-datos-de-portainer">1. Crear un volumen para almacenar datos de Portainer</h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">docker volume create portainer_data</code></pre></figure>
+
+<h3 id="2-ejecutar-el-contenedor-de-portainer">2. Ejecutar el contenedor de Portainer</h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">docker run <span class="nt">-d</span> <span class="se">\</span>
+  <span class="nt">--name</span> portainer <span class="se">\</span>
+  <span class="nt">--restart</span><span class="o">=</span>always <span class="se">\</span>
+  <span class="nt">-p</span> 8000:8000 <span class="se">\</span>
+  <span class="nt">-p</span> 9443:9443 <span class="se">\</span>
+  <span class="nt">-v</span> /var/run/docker.sock:/var/run/docker.sock <span class="se">\</span>
+  <span class="nt">-v</span> portainer_data:/data <span class="se">\</span>
+  portainer/portainer-ce:latest</code></pre></figure>
+
+<p>Este comando:</p>
+<ul>
+  <li>Inicia Portainer en modo daemon (<code class="language-plaintext highlighter-rouge">-d</code>).</li>
+  <li>Expone los puertos 8000 y 9443 (interfaz web con HTTPS).</li>
+  <li>Monta el socket de Docker para interactuar con el daemon.</li>
+  <li>Usa el volumen <code class="language-plaintext highlighter-rouge">portainer_data</code> para almacenar la configuración.</li>
+</ul>
+
+<h3 id="3-acceder-a-la-interfaz-web">3. Acceder a la interfaz web</h3>
+<p>Abre un navegador y dirígete a:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://localhost:9443
+</code></pre></div></div>
+<p>La primera vez que accedas, deberás crear un usuario administrador.</p>
+
+<h2 id="cómo-usar-portainer">¿Cómo usar Portainer?</h2>
+
+<p>Una vez instalado, puedes:</p>
+
+<ol>
+  <li><strong>Conectar Docker local o remoto</strong>: Desde “Environments” puedes gestionar múltiples hosts.</li>
+  <li><strong>Gestionar contenedores</strong>: Inicia, detiene, elimina y monitorea contenedores desde la pestaña “Containers”.</li>
+  <li><strong>Desplegar aplicaciones</strong>: Usa Docker Compose en “Stacks” para definir servicios en archivos <code class="language-plaintext highlighter-rouge">docker-compose.yml</code>.</li>
+  <li><strong>Monitorear recursos</strong>: Consulta el consumo de CPU, memoria y almacenamiento de tus contenedores.</li>
+  <li><strong>Gestionar redes y volúmenes</strong>: Administra redes Docker personalizadas y volúmenes de almacenamiento.</li>
+</ol>
+
+<h2 id="pros-y-contras-de-portainer">Pros y Contras de Portainer</h2>
+
+<h3 id="-ventajas">✅ Ventajas</h3>
+<ul>
+  <li><strong>Fácil de usar</strong>: Interfaz gráfica intuitiva.</li>
+  <li><strong>Compatible con múltiples plataformas</strong>: Funciona con Docker, Kubernetes y Swarm.</li>
+  <li><strong>Gestión remota</strong>: Permite administrar servidores Docker a distancia.</li>
+  <li><strong>Autenticación y control de acceso</strong>: Soporte para usuarios y roles.</li>
+</ul>
+
+<h3 id="-desventajas">❌ Desventajas</h3>
+<ul>
+  <li><strong>Limitaciones en la versión gratuita</strong>: Algunas funcionalidades avanzadas solo están en la versión Business.</li>
+  <li><strong>Consumo de recursos</strong>: Aunque ligero, puede ser innecesario para quienes prefieren usar la CLI.</li>
+  <li><strong>Curva de aprendizaje en Kubernetes</strong>: La integración con Kubernetes puede requerir configuración extra.</li>
+</ul>
+
+<h2 id="conclusión">Conclusión</h2>
+
+<p>Portainer es una excelente herramienta para administrar entornos Docker de manera visual y sencilla. Su facilidad de uso lo hace ideal tanto para principiantes como para administradores de sistemas que buscan eficiencia en la gestión de contenedores.</p>
+
+<p>Si quieres simplificar la administración de Docker y no depender exclusivamente de la terminal, Portainer es una opción altamente recomendable.</p>
+
+<hr />
+
+<p>📌 <strong>¿Tienes dudas o comentarios?</strong> Déjalos abajo o contáctame en mis redes. ¡Nos vemos en el próximo artículo! 🚀</p>]]></content><author><name></name></author><category term="docker" /><category term="devops" /><summary type="html"><![CDATA[Portainer]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/blog/jekyll/update/2025/02/25/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-02-25T20:09:39+01:00</published><updated>2025-02-25T20:09:39+01:00</updated><id>/blog/jekyll/update/2025/02/25/welcome-to-jekyll</id><content type="html" xml:base="/blog/jekyll/update/2025/02/25/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>Jekyll requires blog post files to be named according to the following format:</p>
 
