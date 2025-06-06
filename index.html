@@ -1,496 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="es" class="scroll-smooth">
 <head>
-	<title>Asier Cabo</title>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
-	<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
-    <link rel="stylesheet" type="text/css" href="css/vendor.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-	<!-- script================================================== -->
-	<script src="js/modernizr.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asier Cabo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Activar modo oscuro según preferencias del sistema
+    tailwind.config = {
+      darkMode: 'media',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans">
 
-<div id="entire-wrapper">
+  <!-- Navbar -->
+  <header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur sticky top-0 z-50 shadow">
+    <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Asier Cabo</h1>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#inicio" class="hover:text-blue-600 dark:hover:text-blue-400">Inicio</a></li>
+        <li><a href="#sobremi" class="hover:text-blue-600 dark:hover:text-blue-400">Sobre mí</a></li>
+        <li><a href="#proyectos" class="hover:text-blue-600 dark:hover:text-blue-400">Proyectos</a></li>
+        <li><a href="#contacto" class="hover:text-blue-600 dark:hover:text-blue-400">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header id="header">
-	<div class="header-wrap">
-		<div class="main-logo">
-			<a href="#">
-				<img src="images/main-logo.png" alt="logo">
+  <!-- Hero con fondo -->
+  <section id="inicio" class="min-h-screen flex items-center justify-center text-center px-4 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/Wall.jpg');">
+    <div class="bg-white/70 dark:bg-gray-900/70 backdrop-blur-md p-10 rounded-xl shadow-xl max-w-2xl">
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Hola, soy Asier Cabo</h2>
+      <p class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-6">Estudiante de Ingeniería Informática y entusiasta de la ciberseguridad</p>
+      <a href="/portfolio.html" class="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition">Ver mis proyectos</a>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="sobremi" class="max-w-4xl mx-auto px-4 py-20">
+    <h3 class="text-3xl font-bold mb-4">Sobre mí</h3>
+    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+      Soy estudiante de Ingeniería Informática con un gran interés en la ciberseguridad, desarrollo web y proyectos personales. Me encanta aprender, compartir conocimientos y construir soluciones útiles para otros estudiantes.
+    </p>
+  </section>
+
+  <!-- Portfolio / Blog -->
+	<section id="portfolio" class="py-20 px-4 bg-white dark:bg-gray-900">
+		<div class="max-w-7xl mx-auto">
+			<h3 class="text-3xl font-bold mb-10 text-center">Portfolio</h3>
+			<div class="grid md:grid-cols-3 gap-6">
+				
+			<a href="https://github.com/AsierCL/Arch-Instalation-Guide" target="_blank" class="block bg-white dark:bg-gray-800 rounded-2xl shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+				<!-- Post con imagen 412x358 -->
+				<div class="bg-white dark:bg-gray-800 rounded-2xl shadow overflow-hidden">
+					<div class="w-full sm:w-[412px] h-[358px] mx-auto">
+						<img src="/images/ArchInstallation.png" alt="ArchInstallation" class="w-full h-full object-contain" />
+					</div>
+					<div class="p-5">
+						<span class="text-sm text-blue-600 dark:text-blue-400 font-semibold">Categoría</span>
+						<h4 class="text-xl font-bold mt-2 mb-1">Título del Post</h4>
+						<p class="text-gray-600 dark:text-gray-300 text-sm">Descripción</p>
+					</div>
+				</div>
 			</a>
-		</div><!--main-logo-->
 
-		<nav id="navbar">
-			<div class="top-menu" id="navigation">
-				<ul class="menu-list">
-					<li class="menu-item active"><a href="#home" data-effect="Home">Home</a></li>
-					<li class="menu-item"><a href="#about-me" class="nav-link" data-effect="About Me">About</a></li>
-					<li class="menu-item"><a href="#services" class="nav-link" data-effect="Services">Skills</a></li>
-					<li class="menu-item"><a href="#portfolio" class="nav-link" data-effect="Portfolio">Portfolio</a></li>
-					<li class="menu-item"><a href="/blog/" class="nav-link" data-effect="Blog">Blog</a></l>
-					<li class="menu-item"><a href="#contact" class="nav-link" data-effect="Contact">Contact</a></li>
-				</ul>
-
-				<div class="menu-icon">
-					<a href="javascript:void(0);" class="bar-icon" onclick="e">
-				    	<i class="icon icon-segment"></i>
-				 	</a>
-					<a href="javascript:void(0);" class="bar-icon" onclick="e">
-				    	<i class="icon icon-close"></i>
-				 	</a>
-				</div>
-			</div>
-		</nav>	
-	</div><!--header-wrap-->
-</header>
-
-<div id="billboard">
-	<img src="images/Wall.jpg" alt="post" class="banner-image">
-	<div class="banner-content">
-		<div class="banner-header">
-			<h1>Hello, I’m <span class="colored">Asier Cabo</span></h1>
-			<p>I am a student of Computer Engineering at the University of Santiago de Compostela.<br>Lover of technology and science :)</p>
-			<div class="btn-wrap">
-				<a href="#contact" class="btn-outline-orange btn-pill">Get in touch</a>
-			</div>
-		</div><!--banner-header-->
-		<div class="social-links">
-			<ul>
-				<li><a href="https://www.instagram.com/asiercl_/"><img src="images/logoinstagram.png" alt="Instagram"></a></li>
-				<li><a href="https://twitter.com/asiercl_05"><img src="images/logoX.png" alt="Twitter"></a></li>
-				<li><a href="https://github.com/AsierCL"><img src="images/logogithub.png" alt="GitHub"></a></li>
-				<li><a href="https://www.linkedin.com/in/asier-cabo-2b8247267/"><img src="images/logolinkedin.png" alt="LinkedIn"></a></li>
-			</ul>
-		</div>
-	</div>
-</div><!--billboard-->
-
-<main id="main">
-
-<section id="about-me">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">
-				<div class="section-header">
-					<h2 class="section-title">About Me</h2>
-				</div>
-				<div class="person-information">
-					<div class="description">
-						<p>I am a computer engineering student, who enjoys computers. I am eager to learn everything possible, and my target field is networks and computer systems. I love cybersecurity, especially CTF competitions.</p>
-						<p>My short-term goals are to graduate in my engineering, and at the same time create projects and obtain hacking certifications to see my skills applied.</p>
-						<div class="general-button">
-							<div class="btn-wrap">
-								<a href="#" class="btn-outline-dark">Download CV<br>(Not yet)</a>
-							</div>
-						</div>
-					</div>
-					<!--<div class="skill-chart">
-						<ul class="skill-chart-list">
-							<li>
-							<div class="skill-title">Adobe Photoshop</div>
-							<span class="skill ninety-percent"></span>
-							</li>
-							<li>
-							<div class="skill-title">Adobe Illustrator</div>
-							<span class="skill eighty-percent"></span>
-							</li>
-							<li>
-							<div class="skill-title">Adobe After Effect</div>
-							<span class="skill fifty-percent"></span>
-							</li>
-							<li>
-							<div class="skill-title">Adobe Indesign</div>
-							<span class="skill ninty-percent"></span>
-							</li>
-						</ul>
-					</div>-->
-				</div><!--portfolio-wrap-->
-			</div><!--inner-content-->
-		</div>
-	</div>
-</section>
-
-<section id="services">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">
-				<div class="section-header align-center">
-					<h2 class="section-title">Skills</h2>
-					<p>Some interesting skills. <br>I am continually learning, and trying to increase them.</p>
-				</div>
-				<div class="service-slider grid">
-					<div class="column">
-						<span class="iconify" data-icon="ant-design:linux-outlined"></span>
-						<h3>Linux SO</h3>
-						<p>I am a user of Linux as my main OS.<br>I have experience and knowledge in distros based on Debian and Arch.</p>
-					</div>
-					<div class="column">
-						<span class="iconify" data-icon="carbon:network-3"></span>
-						<h3>Networks</h3>
-						<p>I have knowledge of network and servers configuration, IP addresses, protocols and ports.</p>
-					</div>								
-					<div class="column">
-						<span class="iconify" data-icon="carbon:cics-program"></span>
-						<h3>Programming</h3>
-						<p>I know version control with git, and I know Assembly, C and Python.<br>Also basic web development.</p>
-					</div>	
-					<div class="column">
-						<span class="iconify" data-icon="simple-icons:cyberdefenders"></span>
-						<h3>Cybersecurity</h3>
-						<p>Red team fan. I know pentesing techniques in networks and webs.<br>I enjoy hacking in CTF competitions.</p>
-					</div>	
-					<div class="column">
-						<span class="iconify" data-icon="fluent:math-symbols-16-filled"></span>
-						<h3>Math and algorithms</h3>
-						<p>I have a high math level, applied to computing, and knowledge of algorithm optimization.</p>
-					</div>	
-					<div class="column">
-						<span class="iconify" data-icon="fluent:people-team-16-regular"></span>
-						<h3>Team-work</h3>
-						<p>I have a lot of experience working in a team. I am organized, disciplined and methodical.</p>
-					</div>	
-				</div><!--services-content-->
+		<!-- Post 2 -->
+		<div class="bg-white dark:bg-gray-800 rounded-2xl shadow overflow-hidden">
+			<img src="/assets/img/docker-pi.jpg" alt="Docker Pi" class="w-full h-48 object-cover">
+			<div class="p-5">
+			<span class="text-sm text-green-600 dark:text-green-400 font-semibold">DevOps</span>
+			<h4 class="text-xl font-bold mt-2 mb-1">Servidor con Docker + Pi</h4>
+			<p class="text-gray-600 dark:text-gray-300 text-sm">Infraestructura local</p>
 			</div>
 		</div>
-	</div>
-</section>
 
-<section id="portfolio">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">					
-				<div class="section-header align-center">
-					<h2 class="section-title">Proyects and certifications</h2>
-				</div>
-
-					<ul class="tabs">
-					  <li data-tab-target="#All" class="active tab">All</li>
-					  <li data-tab-target="#Programming" class="tab">Programming</li>
-					  <li data-tab-target="#Cybersecurity" class="tab">Cybersecurity</li>
-					  <li data-tab-target="#Others" class="tab">Others</li>
-					</ul>
-
-					<div class="tab-content">
-					  <div id="All" data-tab-content class="active">
-					    <div class="tab-element">
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/GreenDots.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>GreeDots Application</h3>
-						    			<span class="category">Android Programming</span>
-					    			</div>
-									<a href="https://github.com/martindios/GreenDots" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/LogisimComputer.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Logisim Computer</h3>
-						    			<span class="category">Computer Engineering</span>
-					    			</div>
-										<a href="https://github.com/AsierCL/Logisim-PC" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/MyDotfiles.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>My Dotfiles</h3>
-						    			<span class="category">Linux Ricing</span>
-					    			</div>
-									<a href="https://github.com/AsierCL/Dotfiles" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/SecureChat.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Encrypted Chat P2P</h3>
-						    			<span class="category">C Programming</span>
-					    			</div>
-									<a href="https://github.com/AsierCL/Secure-encrypted-chat" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/ArchInstallation.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Arch Installation Guide</h3>
-						    			<span class="category">Linux</span>
-					    			</div>
-										<a href="https://github.com/AsierCL/Arch-Instalation-Guide" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/MonopolyJava.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Monopoly Java</h3>
-						    			<span class="category">Java Programming</span>
-					    			</div>
-										<a href="https://github.com/AsierCL/Monopoly" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-					  	</div>
-					  </div>
-					  <div id="Programming" data-tab-content>
-					    <div class="tab-element">
-							<figure>
-					    		<a href="">
-					    			<img src="images/GreenDots.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>GreeDots Application</h3>
-						    			<span class="category">Android Programming</span>
-					    			</div>
-									<a href="https://github.com/martindios/GreenDots" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/PrinterManagementApplication.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Printer Management Application</h3>
-						    			<span class="category">C Programming</span>
-					    			</div>
-									<a href="https://github.com/AsierCL/Printer-Management-Application" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/VectorSorting.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Vector Sorting Application</h3>
-						    			<span class="category">C Programming</span>
-					    			</div>
-										<a href="https://github.com/AsierCL/Vector-Sorting-Program" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/SecureChat.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Encrypted Chat P2P</h3>
-						    			<span class="category">C Programming</span>
-					    			</div>
-									<a href="https://github.com/AsierCL/Secure-encrypted-chat" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/MonopolyJava.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Monopoly Java</h3>
-						    			<span class="category">Java Programming</span>
-					    			</div>
-										<a href="https://github.com/AsierCL/Monopoly" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-					    </div>
-					  </div>
-					  <div id="Cybersecurity" data-tab-content>
-					    <div class="tab-element">
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/CiscoIntroCybersec.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Introduction to Cybersecurity</h3>
-						    			<span class="category">Cybersecurity</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/LinuxFundamentalsHTB.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Linux Fundamentals</h3>
-						    			<span class="category">Cybersecurity</span>
-					    			</div>
-										<a href="https://academy.hackthebox.com/achievement/badge/a2a9f917-c408-11ed-acfc-bea50ffe6cb4" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-					    </div>
-					  </div>
-					  <div id="Others" data-tab-content>
-					    <div class="tab-element">
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/LogisimComputer.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Logisim Computer</h3>
-						    			<span class="category">Computer Engineering</span>
-					    			</div>
-										<a href="https://github.com/AsierCL/Logisim-PC" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/MyDotfiles.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>My Dotfiles</h3>
-						    			<span class="category">Linux Ricing</span>
-					    			</div>
-									<a href="https://github.com/AsierCL/Dotfiles" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/GoogleSantanderIA.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Google: Artificial Intelligence and Productivity</h3>
-						    			<span class="category">IA</span>
-					    			</div>
-									<a href="images/Google:InteligenciaArtificialyproductividad.pdf" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/CiscoNetworkingBasics.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Networking Basics</h3>
-						    			<span class="category">Others</span>
-					    			</div>
-										<a href="https://www.credly.com/badges/fddd7eb8-ae56-4ec5-8aeb-6ea5c1cb1bb8" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-							<figure>
-					    		<a href="">
-					    			<img src="images/ArchInstallation.png"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>Arch Installation Guide</h3>
-						    			<span class="category">Linux</span>
-					    			</div>
-										<a href="https://github.com/AsierCL/Arch-Instalation-Guide" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-					    </div>
-					  </div>
-				</div><!--tab-content-->
-
-				<div class="btn-wrap align-center">
-					<a href="./portfolio.html" class="btn-accent">View Portfolio</a>
-				</div>
-
+		<!-- Post 3 -->
+		<div class="bg-white dark:bg-gray-800 rounded-2xl shadow overflow-hidden">
+			<img src="/assets/img/blog-seguridad.jpg" alt="Blog Seguridad" class="w-full h-48 object-cover">
+			<div class="p-5">
+			<span class="text-sm text-purple-600 dark:text-purple-400 font-semibold">Blog</span>
+			<h4 class="text-xl font-bold mt-2 mb-1">Mi primer artículo</h4>
+			<p class="text-gray-600 dark:text-gray-300 text-sm">Introducción</p>
 			</div>
 		</div>
-	</div>
-</section>
 
-<section id="contact">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">
-				<h2>Let’s work together</h2>
-				<p>Although I do not offer my services professionally, I am open to collaborations or small jobs.<br>Just feel free to contact me.</p>
-				<!--<div class="btn-wrap align-center">
-					<a href="#" class="btn-outline-orange btn-pill">Contact me</a>
-				</div>-->
-			</div>
 		</div>
 	</div>
-</section>
+	</section>
 
-</main>
-
-<div id="footer-bottom">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">
-				<div class="grid">
-					<div class="copyright">
-						<p>© 2025 Asier Cabo. All Rights Reserved.</p>
-					</div>
-					<div class="social-links">
-						<ul>
-							<li><a href="https://www.instagram.com/asiercl_/"><img src="images/logoinstagram.png" alt="Instagram"></a></li>
-							<li><a href="https://twitter.com/asiercl_05"><img src="images/logoX.png" alt="Twitter"></a></li>
-							<li><a href="https://github.com/AsierCL"><img src="images/logogithub.png" alt="GitHub"></a></li>
-							<li><a href="https://www.linkedin.com/in/asier-cabo-2b8247267/"><img src="images/logolinkedin.png" alt="LinkedIn"></a></li>
-						</ul>
-					</div>
-				</div>
-			</div><!--footer-bottom-content-->			
-		</div>
+  <!-- Contacto -->
+  <section id="contacto" class="max-w-xl mx-auto px-4 py-20">
+	<h3 class="text-3xl font-bold mb-4">Contacto</h3>
+	<p class="text-gray-700 dark:text-gray-300 mb-6">Encuéntrame en mis redes sociales:</p>
+	<div class="flex justify-center space-x-8">
+	  <a href="https://linkedin.com/in/asiercabo" target="_blank" class="text-4xl hover:text-blue-600 dark:hover:text-blue-400">
+		<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+		  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+		</svg>
+	  </a>
+	  <a href="https://github.com/AsierCL" target="_blank" class="text-4xl hover:text-gray-600 dark:hover:text-gray-400">
+		<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+		  <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+		</svg>
+	  </a>
 	</div>
-</div>
+  </section>
 
-</div><!--entire-wrapper-->
-
-
-	<script src="js/jquery-1.11.0.min.js"></script>
-	<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/script.js"></script>
+  <!-- Footer -->
+  <footer class="bg-gray-100 dark:bg-gray-900 py-6 text-center text-sm text-gray-600 dark:text-gray-400">
+	© 2025 Asier Cabo. Todos los derechos reservados.
+  </footer>
 
 </body>
 </html>
